@@ -16,7 +16,7 @@ This repo contains firmware, server code and some example applications, intended
 <img src="images/rich.png">
 
 ## Example applications
-* 📩 Querying and replying to messages (using a [Maubot server](https://github.com/justLV/onju-voice-maubot) & Beeper)
+* 📩 Querying and replying to messages (using a [custom Maubot plugin](https://github.com/justLV/onju-voice-maubot) & Beeper)
 * 💡 Light control with [Home Assistant](#-home-assistant)
 * 📝 Adding and retrieving notes/memos for the LLM to craft a response with
 
