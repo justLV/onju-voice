@@ -131,9 +131,7 @@ The adventurous can get try replacement shells from [AliExpress](https://www.ali
 
 a) if you can commit to making significant contributions to the codebase and/or major contributions to the board design or RF review, we may be able to make early samples available
 
-b) if you don’t need the form factor, don’t mind rolling up my sleeves, and have some HW experience, you can breadboard it out with readily available components until you can get your hands on an order.
-
-Here are the components you’ll need (🌸 Adafruit link for convenience but shop around wherever you’d like)
+b) if you don’t need the form factor, don’t mind rolling up my sleeves, and have some HW experience, you can breadboard it out with readily available components until you can get your hands on an order. Here are the components that should be able to get a demo running (🌸 Adafruit link for convenience but shop around wherever you’d like)
 
 * ESP32-S3 devboard, ideally w/ PSRAM (e.g. [QT Py S3](https://www.adafruit.com/product/5700) or [ESP32-S3](https://www.adafruit.com/product/5364))
 * [Microphone](https://www.adafruit.com/product/3421) (only need 1 for the Arduino implementation, ensure it's a SPH0645 to limit debugging)
