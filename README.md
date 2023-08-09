@@ -1,4 +1,4 @@
-# Onju Voice 🍐🔊
+# Onju Voice 🍐🗣️
 
 A hackable AI home assistant platform using the Google Nest Mini (2nd gen) form factor, consisting of:
 * a custom PCB designed to be a drop-in replacement to the original, using the ESP32-S3 for audio processing
@@ -15,9 +15,9 @@ This repo contains firmware, server code and some example applications, intended
 <img src="images/rich.png">
 
 ## Example applications
-* 📩 Querying and replying to messages (using a [Maubot server](https://github.com/justLV/onju-home-maubot) & Beeper)
-* 💡 Light control as an example of integration with Home Assistant
-* 📝 Adding notes/memos and basic retrieval by referencing a recent date, for the LLM to craft a response with. 
+* 📩 Querying and replying to messages (using a [Maubot server](https://github.com/justLV/onju-voice-maubot) & Beeper)
+* 💡 Light control with Home Assistant
+* 📝 Adding and retrieving notes/memos for the LLM to craft a response with
 
 *Not included:*
 * 👥 Multiple voice characters. I’ll leave it to the user to clone voices as they deem fair use. Also from experience LLM’s < GPT4 don’t consistently enough follow instructions to reliably respond in different characters AND perform multiple function calling with complicated prompts.
