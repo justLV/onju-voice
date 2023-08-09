@@ -20,7 +20,7 @@ This repo contains firmware, server code and some example applications, intended
 * 📝 Adding notes/memos and basic retrieval by referencing a recent date, for the LLM to craft a response with. 
 
 *Not included:*
-* 👥 Multiple voice characters. I’ll leave it to the user to clone voices as they deem fair use. Also in experience LLM’s < GPT4 don’t consistently enough follow instructions to reliably respond in different characters and perform multiple function calling with complicated prompts.
+* 👥 Multiple voice characters. I’ll leave it to the user to clone voices as they deem fair use. Also from experience LLM’s < GPT4 don’t consistently enough follow instructions to reliably respond in different characters AND perform multiple function calling with complicated prompts.
 
 ## Current features of the device <> server platform
 * Auto-discovery of devices using multicast announcements
@@ -40,7 +40,7 @@ This repo contains firmware, server code and some example applications, intended
 * The server currently only does transcription locally and uses:
   * OpenAI for generating responses & functions calls, but if you have the hardware you could run a local LLM, using something like ToolLLM for calling API’s to add almost any capabilities you’d wish.
   * Text-to-speech from Elevenlabs - this is fair to say the easiest to get running, fastest and most expressive option out there but FWIR data policy is a little dubious so careful about sending anything too sensitive. I’d really like to see comparable performing open source options that you can run locally
-* Conversation flow is highly serialized, i.e. recording > transcription > LLM > TTS needs to finish each step before moving onto the next. Not included here is feeding incomplete transcriptions to a smaller model, and streaming slower LLM's like GPT4 to Elevenlabs and sending streaming responses back, it's a little too hacky right now.
+* Conversation flow is highly serialized, i.e. recording > transcription > LLM > TTS needs to finish each step before moving onto the next. Not included here is feeding incomplete transcriptions to a smaller model, and streaming slower LLM's like GPT4 to Elevenlabs and sending streaming responses back, it's currently a little too hacky to include in this release.
 * No wakeword usage, mostly done intentionally as I feel uttering a wake-word before every response is a terrible experience. This currently uses a combo of VAD, mic-timeouts sent from server, tap-to-wake, mute switch usage etc. Not included here is experiments running a smaller, faster LLM for classification with a running transcription before handing off to a larger LLM with specific prompt
 
 ## Other areas for improvement
