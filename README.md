@@ -1,4 +1,4 @@
-# Onju Voice 🍐🗣️
+# Onju Voice 🍐🔈
 
 A hackable AI home assistant platform using the Google Nest Mini (2nd gen) form factor, consisting of:
 * a custom PCB designed to be a drop-in replacement to the original, using the ESP32-S3 for audio processing
