@@ -9,14 +9,14 @@ A hackable AI home assistant platform using the Google Nest Mini (2nd gen) form 
 ## Overview
 
 This repo contains firmware, server code and some example applications, intended to be as accessible as possible for getting up and running i.e.:
-* Firmware for the custom PCB can be programmed using the Arduino IDE and a USB cable (installation of ESP-IDF not required)
-* Server code has minimal requirements besides running Whisper locally, and should be able to run on most devices that you can leave plugged in whether MacOS / Linux / Win etc.
+* [Firmware](#-firmware) for the custom PCB can be programmed using the Arduino IDE and a USB cable (installation of ESP-IDF not required)
+* [Server code](#%EF%B8%8F-server) has minimal requirements besides running Whisper locally, and should be able to run on most devices that you can leave plugged in whether MacOS / Linux / Win etc.
 
 <img src="images/rich.png">
 
 ## Example applications
 * 📩 Querying and replying to messages (using a [Maubot server](https://github.com/justLV/onju-voice-maubot) & Beeper)
-* 💡 Light control with Home Assistant
+* 💡 Light control with [Home Assistant](#-home-assistant)
 * 📝 Adding and retrieving notes/memos for the LLM to craft a response with
 
 *Not included:*
