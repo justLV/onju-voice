@@ -15,7 +15,7 @@ This repo contains firmware, server code and some example applications, intended
 <img src="images/rich.png">
 
 ## Example applications
-* 💬 Querying and replying to messages, using a [Maubot server](https://github.com/justLV/onju-home-maubot) and Beeper, but you can customize this example for e-mail or even [run your own bridge](https://matrix.org/ecosystem/bridges/)
+* 📩 Querying and replying to messages (using a [Maubot server](https://github.com/justLV/onju-home-maubot) & Beeper)
 * 💡 Light control as an example of integration with Home Assistant
 * 📝 Adding notes/memos and basic retrieval by referencing a recent date, for the LLM to craft a response with. 
 
@@ -78,6 +78,8 @@ Then go through the onboarding, setup a user, name your devices and get a Long L
 Follow instructions [here](https://github.com/justLV/onju-home-maubot) to setup Maubot with your Beeper account. Ensure the correct URL is setup in `config.yaml`, set `send_replies` to True if your friends are forgiving of the odd mistakes, and set a `footer`.
 
 Don’t have Beeper yet and can’t wait? [Try setup a Matrix bridge yourself](https://docs.mau.fi/bridges/go/imessage/mac/setup.html) and a custom function definition for OpenAI function calling (and share how you did it!)
+
+Following this example you can also integrate e-mail.
 
 ## 📟 Firmware
 
