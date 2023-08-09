@@ -1,4 +1,5 @@
 # Onju Voice 🍐🔈
+💫 [DEMO's](https://twitter.com/justLV)
 
 A hackable AI home assistant platform using the Google Nest Mini (2nd gen) form factor, consisting of:
 * a custom PCB designed to be a drop-in replacement to the original, using the ESP32-S3 for audio processing
@@ -86,7 +87,7 @@ Following this example you can also integrate e-mail.
 Irrespective of what you use for development, the quickest & least error prone setup for building & flashing firmware is probably installing the Arduino IDE [Software](https://www.arduino.cc/en/software), and then using this IDE or your preference i.e. VSCode for development (Copilot)
 
 * Add the ESP32 boards as detailed [here](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html)
-TL;DR add `https://espressif.github.io/arduino-esp32/package_esp32_index.json` to In Preferences > Additional Boards Manager URL’s
+(TL;DR add `https://espressif.github.io/arduino-esp32/package_esp32_index.json` to `Preferences > Additional Boards Manager URL’s`)
 * Under Boards Manager, install “esp32” by Espressif Systems
 * Under Library Manager, install “Adafruit NeoPixel Library” 
 * Clone this repo to `Documents/Arduino` for simplicity. 
