@@ -4,7 +4,7 @@ A hackable AI home assistant platform using the Google Nest Mini (2nd gen) form 
 * a custom PCB designed to be a drop-in replacement to the original, using the ESP32-S3 for audio processing
 * a server for handling the transcription, response generation and Text-to-Speech from multiple devices on the same network
 
-<img src="images/header.jpg" width="800">
+<img src="images/header_white.jpg" width="960">
 
 ## Overview
 
