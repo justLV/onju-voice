@@ -1,4 +1,5 @@
 dateparser
+openai
 fire
 numpy
 openai-whisper
