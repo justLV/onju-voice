@@ -1,8 +1,10 @@
-# 🍐 Onju Home
+# Onju Home 🍐🔊
 
 A hackable AI home assistant platform using the Google Nest Mini (2nd gen) form factor, consisting of:
 * a custom PCB designed to be a drop-in replacement to the original, using the ESP32-S3 for audio processing
 * a server for handling the transcription, response generation and Text-to-Speech from multiple devices on the same network
+
+<img src="images/header.jpg" width="800">
 
 ## Overview
 
@@ -10,6 +12,7 @@ This repo contains firmware, server code and some example applications, intended
 * Firmware for the custom PCB can be programmed using the Arduino IDE and a USB cable (installation of ESP-IDF not required)
 * Server code has minimal requirements besides running Whisper locally, and should be able to run on most devices that you can leave plugged in whether MacOS / Linux / Win etc.
 
+<img src="images/rich.png">
 
 ## Example applications
 * 💬 Querying and replying to messages, using a [Maubot server](https://github.com/justLV/onju-home-maubot) and Beeper, but you can customize this example for e-mail or even [run your own bridge](https://matrix.org/ecosystem/bridges/)
@@ -26,6 +29,7 @@ This repo contains firmware, server code and some example applications, intended
 * Speaker and microphone visualization with the LED’s, and custom LED control via the server
 * Mute switch functionality, tap-to-wake for enabling the microphone, and setting mic timeout via the server
 * Device-level logging to individual files and console output using `rich`
+* [coming soon] SoftAP WiFi provisioning to prevent need for programming WiFi credentials 
 
 ## Limitations of this release:
 * The Arduino IDE doesn’t (yet) support the Espressif’s Audio SDK’s, such as [ESP-ADF](https://github.com/espressif/esp-adf), [ESP-Skainet](https://github.com/espressif/esp-skainet) etc. For these demo's it's not absolutely required, but if you use Espressif’s ESP-IDF with these SDK's you'd unlock features such as:
@@ -97,14 +101,18 @@ TL;DR add `https://espressif.github.io/arduino-esp32/package_esp32_index.json` t
 
 ## 🧩 Hardware 
 
+<p float="left">
+  <img src="images/copper.png" width="48%" />
+  <img src="images/render.png" width="48%" /> 
+</p>
+
 [Schematics & PCB preview](https://365.altium.com/files/C44B8519-69BA-464B-A221-24D527B89E2C)
 
-After evaluating a few options the PCB will be made available from Crowd Supply, to leverage their unique supply chain and bulk ordering.
+PCB's will be made available from Crowd Supply, to leverage their fulfillment expertize and bulk ordering.
 
 I will be sharing more detailed instructions for replacement.
 
-Replacement gaskets for the microphone & LED's can be made using adhesive foam ([e.g.](https://www.amazon.com/gp/product/B07KCJ31J9)) and a punch set ([e.g.](https://www.amazon.com/gp/product/B087D2Z43F))
-
+Replacement gaskets for the microphone & LED's can be made using [adhesive foam](https://www.amazon.com/gp/product/B07KCJ31J9) and a [punch set](https://www.amazon.com/gp/product/B087D2Z43F)) for example
 
 ## ❓Questions
 
@@ -123,18 +131,16 @@ The adventurous can get try replacement shells from [AliExpress](https://www.ali
 
 a) if you can commit to making significant contributions to the codebase and/or major contributions to the board design or RF review, we may be able to make early samples available
 
-b) if you don’t need the form factor, don’t mind rolling up my sleeves, and have some HW experience, you can breadboard it out with readily available components until you can get your hands on one.
+b) if you don’t need the form factor, don’t mind rolling up my sleeves, and have some HW experience, you can breadboard it out with readily available components until you can get your hands on an order.
 
-Here are the components you’ll need (Adafruit link for convenience but shop around wherever you’d like)
+Here are the components you’ll need (🌸 Adafruit link for convenience but shop around wherever you’d like)
 
-* ESP32-S3 devboard (e.g. [QT Py S3](https://www.adafruit.com/product/5700) or [ESP32-S3-DevKitC-1-N8R8](https://www.adafruit.com/product/5364))
+* ESP32-S3 devboard, ideally w/ PSRAM (e.g. [QT Py S3](https://www.adafruit.com/product/5700) or [ESP32-S3](https://www.adafruit.com/product/5364))
 * [Microphone](https://www.adafruit.com/product/3421) (only need 1 for the Arduino implementation, ensure it's a SPH0645 to limit debugging)
 * [Amplifier](https://www.adafruit.com/product/3006)
 * [Speaker](https://www.adafruit.com/product/1313)
 * [Neopixel LED strip](https://www.adafruit.com/product/1426) - just set the firmware to the correct #
-* [Breadboard & wire kit](https://www.adafruit.com/product/3314)  (you can use pieces of wire for cap touch)
-~[https://www.adafruit.com/product/1426](https://www.adafruit.com/product/1426)~
-~[https://www.adafruit.com/product/3006](https://www.adafruit.com/product/3006)~
+* [Breadboard & wire kit](https://www.adafruit.com/product/3314)  (you can use protruding pieces of wire for cap touch)
 
 You'll need to update the `custom_boards.h` with your pin mapping
 
