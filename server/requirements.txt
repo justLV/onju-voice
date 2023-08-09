@@ -1,0 +1,10 @@
+dateparser
+fire
+numpy
+openai-whisper
+pydub
+PyYAML
+requests
+rich
+scipy
+webrtcvad

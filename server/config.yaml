@@ -1,0 +1,67 @@
+use_maubot: False # this requires a Maubot server running & Beeper
+use_home_assistant: False # this requires a Home Assistant server running (see https://www.home-assistant.io/installation/linux#docker-compose) & a token added to credentials.json
+use_notes: False
+
+log_dir: "logs"
+audio_dir: "data"
+greeting_wav: "hello_imhere.wav"
+temp_wav_fname: "temp_response.wav"
+elevenlabs_default_voice: "Samantha"
+
+devices_file: "devices.json"
+voices_file: "voices.json"
+notes_file: "notes.json"
+
+maubot:
+  url: "http://localhost:8080/"
+  send_replies: False # Doesn't actually send, just logs for testing
+  footer: "\n\n∞ sent by onju, an AI assistant ∞" # if you want to go YOLO and send messages, at least include some disclaimer! ¯\_(ツ)_/¯
+
+llm:
+  gpt_model: "gpt-3.5-turbo" #  ensure function calling works (> "gpt-3.5-turbo-0613")
+  max_messages: 15 # should probably make this pruning time or "conversation" -based instead of count-based
+  users_name: "Justin"
+  init_prompt: >
+    You are a friendly assistant to the user, {USER}, and you ALWAYS respond in less than 20 words. You are observant of all the details in the data you have in order to come across as highly observant, emotionally intelligent and humanlike in your responses.
+  notes_prompt_append: >
+    You can help {USER} take notes, remember or record things, and query past notes by date to help find information {USER} may be looking for.
+  ha_prompt_append: >
+    You can control lights in the home, using your intuition to decide on what lights are referred to and how to adjust the brightness and color.
+  maubot_prompt_append: >
+    Your main task is to help with summarizing and replying to messages in a friendly, casual and conversational manner, and help {USER} send short replies based on his suggestions of how to answer. Make sure to provide summaries of the messages as casually as possible WITHOUT just reading them out the details. Maybe slip in a joke if possible, but only if you can keep the total answer short. Remember to mention the name of the sender and casually when each message was sent, but making sure to keep the total response as short as possible. DO NOT ask if anything else is needed or whether {USER} wants to reply. If you are asked to compose a new message to a certain person, remember that you can only reply to the most recently retrieved messages that have an index, so instead search for messages from the requested person first.
+  reminder_prompt_append: >
+      Remember to always keep responses as short as possible, under 20 words, and avoid asking if there is anything else you can assist with. This is very important.
+
+mic: # mic settings, set on ESP32
+  chunk: 480 # 30ms at 16kHz for webrtcvad compatibility, also needs to keep under packet size for UDP
+  format: "int16" # 480*2 bytes per chunk = 960 bytes per packet
+  rate: 16000
+  channels: 1
+
+led: # these are the light pulses sent over TCP to the ESP32 when speech is detected
+  power: 35 # amount increased per 30ms frame where speech is detected (cumulates up to 255)
+  update_period: 0.2 # time in seconds, increase if latency is issue
+  fade: 6 # how quickly pulses fade (rate set by `updateLedTask` in ESP32 code)
+
+vad:
+  window_length: 0.8 # seconds of audio to keep in the window for VAD (one binary decision is made every 30ms per webrtcvad)
+  pre_buffer_length: 1.0 # seconds of audio to keep before starting recording
+  silence_stopping_ratio: 0.2 # ratio of frames that need to be speech to continue recording
+  silence_stopping_time: 1.5 # seconds of silence before stopping recording
+  start_ratio: 0.35
+
+transcribe:
+  period: 30 # seconds between unfinished transcriptions being updated. This is only ever used for demos with screens that show the transcription in real-time, otherwise set to high value
+  no_speech_prob: 0.45 # probability of no speech for a segment to be considered a transcription
+  whisper_model: "base.en" # can try medium.en for better results (slower & more memory)
+
+
+udp: # receiving audio from ESP32
+  ip: "0.0.0.0"
+  port: 3000
+
+tcp_port: 3001 # for sending audio files to ESP32
+
+multicast: # Listen for announcements of devices connecting
+  group: "239.0.0.1" 
+  port: 12345

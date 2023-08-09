@@ -1,0 +1,5 @@
+.DS_Store
+git_hash.h
+debug.*
+debug_custom.json
+credentials.h
