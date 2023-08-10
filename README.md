@@ -111,7 +111,7 @@ Irrespective of what you use for development, the quickest & least error prone s
 
 [Schematics & PCB preview](https://365.altium.com/files/C44B8519-69BA-464B-A221-24D527B89E2C)
 
-PCB's will be made available from Crowd Supply, to leverage their fulfillment expertize and bulk ordering.
+PCB's will be made available from Crowd Supply ([sign up link](https://www.crowdsupply.com/onju/onju-voice)), to leverage their fulfillment expertize and bulk ordering.
 
 I will be sharing more detailed instructions for replacement.
 
