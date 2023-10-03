@@ -12,7 +12,7 @@ A hackable AI home assistant platform using the Google Nest Mini (2nd gen) form 
 This repo contains firmware, server code and some example applications, intended to be as accessible as possible for getting up and running i.e.:
 * [Firmware](#-firmware) for the custom PCB can be programmed using the Arduino IDE and a USB cable (installation of ESP-IDF not required)
 * [Server code](#%EF%B8%8F-server) has minimal requirements besides running Whisper locally, and should be able to run on most devices that you can leave plugged in whether MacOS / Linux / Win etc.
-* [Design files](https://365.altium.com/files/77C755F4-7195-4B29-93AA-0C10A2471AC3) in Altium format
+* [Hardware](#-hardware) can be ordered from [PCBWay](https://www.pcbway.com/project/shareproject/Onju_Voice_d33625a1.html) and Altium design files are included
 <img src="images/rich.png">
 
 ## Example applications
@@ -109,9 +109,8 @@ Irrespective of what you use for development, the quickest & least error prone s
   <img src="images/render.png" width="48%" /> 
 </p>
 
-[Downloadable schematics & PCB](https://365.altium.com/files/77C755F4-7195-4B29-93AA-0C10A2471AC3)
-
-Please feel free to download, modify and improve this design and share your updates!
+[Preview schematics & PCB here](https://365.altium.com/files/77C755F4-7195-4B29-93AA-0C10A2471AC3) 
+You should be able to download files, otherwise they are in the folder `hardware` in Altium format. Feel free to modify & improve this design and share your updates!
 
 You can order PCBA's directly from PCBWay [here](https://www.pcbway.com/project/shareproject/Onju_Voice_d33625a1.html). I've used a few suppliers and they are of the most reliable I've experienced for turnkey assembly at that pricepoint so I'm happy to point business their way. (Other options of selling single units, with margins, ended up forcing a pricepoint > Google Nest Mini itself, and wouldn't allow shipment into EU/UK without certification so I abandoned this)
 
