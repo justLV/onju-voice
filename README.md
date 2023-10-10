@@ -1,10 +1,12 @@
 # Onju Voice 🍐🔈
+
 💫 [DEMO's](https://twitter.com/justLV)
 
 A hackable AI home assistant platform using the Google Nest Mini (2nd gen) form factor, consisting of:
 * a custom PCB designed to be a drop-in replacement to the original, using the ESP32-S3 for audio processing
 * a server for handling the transcription, response generation and Text-to-Speech from multiple devices on the same network
 
+(This repo focuses on the experimental conversational LLM aspect to replicate some functionality shown in the demos, and not as a full fledged replacement to a home assistant. This is not being actively maintained, but I've released all source code and design files for anyone else to pick up from here.)
 <img src="images/header_white.jpg" width="960">
 
 ## Overview
@@ -30,7 +32,6 @@ This repo contains firmware, server code and some example applications, intended
 * Speaker and microphone visualization with the LED’s, and custom LED control via the server
 * Mute switch functionality, tap-to-wake for enabling the microphone, and setting mic timeout via the server
 * Device-level logging to individual files and console output using `rich`
-* [coming soon] SoftAP WiFi provisioning to prevent need for programming WiFi credentials 
 
 ## Limitations of this release:
 * The Arduino IDE doesn’t (yet) support the Espressif’s Audio SDK’s, such as [ESP-ADF](https://github.com/espressif/esp-adf), [ESP-Skainet](https://github.com/espressif/esp-skainet) etc. For these demo's it's not absolutely required, but if you use Espressif’s ESP-IDF with these SDK's you'd unlock features such as:
