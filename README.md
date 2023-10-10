@@ -6,7 +6,8 @@ A hackable AI home assistant platform using the Google Nest Mini (2nd gen) form 
 * a custom PCB designed to be a drop-in replacement to the original, using the ESP32-S3 for audio processing
 * a server for handling the transcription, response generation and Text-to-Speech from multiple devices on the same network
 
-(This repo focuses on the experimental conversational LLM aspect to replicate some functionality shown in the demos, and not as a full fledged replacement to a home assistant. This is not being actively maintained, but I've released all source code and design files for anyone else to pick up from here.)
+_(This repo focuses on the experimental conversational LLM aspect to replicate some functionality shown in the demos, and not as a full fledged replacement to a home assistant. This is not being actively maintained, but I've released all source code and design files for anyone else to pick up from here.)_
+
 <img src="images/header_white.jpg" width="960">
 
 ## Overview
