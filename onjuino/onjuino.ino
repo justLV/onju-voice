@@ -1,7 +1,6 @@
 #include <WiFi.h>
 #include <WiFiUdp.h>
 #include <driver/i2s.h>
-#include <FreeRTOS.h>
 #include <Adafruit_NeoPixel.h>
 
 #if __has_include("git_hash.h") // optionally setup post-commit hook to generate git_hash.h
